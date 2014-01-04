@@ -5,6 +5,7 @@ class BuildingsController < ApplicationController
 
   def new
     @building = Building.new
+    @owners = Owner.all
   end
 
   def show

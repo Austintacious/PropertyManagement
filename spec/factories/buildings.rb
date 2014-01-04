@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :building do
-    street_address "123 MyString Street"
+    street_address "1213 MyString Street"
     city "MyString"
     state "MA"
     zipcode "02151"

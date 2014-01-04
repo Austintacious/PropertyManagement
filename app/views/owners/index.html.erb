@@ -1,0 +1,10 @@
+<% @owners.each do |owner| %>
+<h1><%= owner.first_name %> <%= owner.last_name %></h1>
+ID: <%= owner.id %><br>
+Company: <%= owner.company_name %><br>
+Email: <%= owner.email %><br>
+<%= link_to "Delete #{owner.id}", owner, method: :delete, data: {confirm: "Are you sure?"} %>
+<hr>
+<% end %>
+<br>
+<%= link_to 'Back', buildings_path %>

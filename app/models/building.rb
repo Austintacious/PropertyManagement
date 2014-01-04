@@ -6,7 +6,7 @@ class Building < ActiveRecord::Base
   validates_presence_of :zipcode
 
   validates :street_address, format: {with: /\A\d{1,5}\s[a-z]+\s[a-z]+\z/i}
-  validates :city, format: {with: /\A[a-z]+\z/i}
+  validates :city, format: {with: /\A[a-zA-Z]+(?:[\s-][a-zA-Z]+)*\z/i}
   validates :state, format: {with: /\A[a-z]{2}\z/i}
   validates :zipcode, format: {with: /\A[0-9]{5}\z/}
 

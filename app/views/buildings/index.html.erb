@@ -8,7 +8,10 @@
 <strong>Zipcode:</strong> <%= building.zipcode %><br>
 <strong>Description:</strong> <%= building.description %><br>
 <strong>Owner:</strong> <%= building.owner_id %>
+<br><%= link_to 'Delete', building, method: :delete, data: { confirm: "Are you sure?"} %>
 <br><hr>
 <% end %>
 
-<%= link_to 'Add a Building', new_building_path %>  <%= link_to 'Add an Owner', new_owner_path %>
+<%= link_to 'Add a Building', new_building_path %><br>
+<%= link_to 'Add an Owner', new_owner_path %><br>
+<%= link_to 'View Owners', owners_path %>

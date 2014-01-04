@@ -5,7 +5,7 @@ class BuildingsController < ApplicationController
 
   def new
     @building = Building.new
-    @owners = Owner.all.select("last_name")
+    @owners = Owner.all
   end
 
   def show

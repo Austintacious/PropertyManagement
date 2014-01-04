@@ -1,0 +1,14 @@
+<h1>Building Listings</h1>
+<hr>
+
+<% @buildings.each do |building| %>
+<h1><%= building.street_address %></h1>
+<strong>City:</strong> <%= building.city %><br>
+<strong>State:</strong> <%= building.state %><br>
+<strong>Zipcode:</strong> <%= building.zipcode %><br>
+<strong>Description:</strong> <%= building.description %><br>
+<strong>Owner:</strong> <%= building.owner_id %>
+<br><hr>
+<% end %>
+
+<%= link_to 'Add a Building', new_building_path %>  <%= link_to 'Add an Owner', '#' %>

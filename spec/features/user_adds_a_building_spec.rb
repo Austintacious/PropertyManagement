@@ -8,14 +8,14 @@ feature 'User adds a building' do
     fill_in "Street Address", with: "1234 Blah Street"
     fill_in "City", with: "Nowhere"
     select "MA", from: "State"
-    fill_in "Zipcode", with: 02151
+    fill_in "Zipcode", with: "02151"
     click_button "Create Building"
-    expect(page).to have_content("Building created successfully!") 
+    expect(page).to have_content("1234 Blah Street") 
   end
 
   scenario 'required information not specified' do
     visit root_path
-    click_link "Add a building"
+    click_link "Add a Building"
     click_button "Create Building"
     expect(page).to have_content("can't be blank")
   end
